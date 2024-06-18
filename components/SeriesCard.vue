@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 max-h-[38rem] grid grid-rows-[22rem_16rem] group overflow-hidden"
+      class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 max-h-[38rem] grid grid-rows-[26rem_12rem] group overflow-hidden"
     >
       <NuxtLink
         @click="changeItemState(item)"

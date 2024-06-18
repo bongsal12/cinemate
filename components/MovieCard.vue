@@ -2,9 +2,13 @@
   <div>
     <div
       v-if="id"
-      class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 grid grid-rows-[25rem_13rem] group overflow-hidden"
     >
-      <NuxtLink @click="changeItemState(item)" :to="`/item/${title}`">
+      <NuxtLink
+        @click="changeItemState(item)"
+        :to="`/item/${title}`"
+        class="group-hover:scale-105 group-hover:rotate-180 group-hover:animate-bounce transition-all duration-300"
+      >
         <img
           class="rounded-t-lg"
           :src="`${imagesiteUrl}${poster_path}`"
@@ -26,7 +30,7 @@
           v-if="overview"
           class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-black bg-white rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
-          {{ overview }}
+          {{ overview.substr(0, 180) }}...
         </p>
         <p
           v-else
