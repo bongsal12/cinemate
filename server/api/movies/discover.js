@@ -3,7 +3,7 @@ export default defineEventHandler(async (event) => {
   const { AccessToken } = config;
   const movieUrl = "https://api.themoviedb.org/3/discover/movie";
   const seriesUrl = "https://api.themoviedb.org/3/discover/tv";
-
+  console.log(AccessToken);
   const movies = await $fetch(movieUrl, {
     method: "get",
     headers: {
